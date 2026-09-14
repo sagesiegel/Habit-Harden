@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Little Habit Garden</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <main class="app">
+    <header class="page-header">
+      <p class="eyebrow">Small actions become something beautiful</p>
+      <h1>My Little Habit Garden</h1>
+      <p id="weekDates" class="subtitle"></p>
+    </header>
+
+    <section class="summary-card">
+      <div class="summary-item">
+        <span id="weeklyActions" class="summary-number">0</span>
+        <span class="summary-label">actions this week</span>
+      </div>
+
+      <div class="summary-item">
+        <span id="bloomCount" class="summary-number">0</span>
+        <span class="summary-label">plants blooming</span>
+      </div>
+
+      <div class="summary-item">
+        <span id="daysRemaining" class="summary-number">0</span>
+        <span class="summary-label">days remaining</span>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">This week</p>
+          <h2>Your garden</h2>
+        </div>
+      </div>
+
+      <div id="garden" class="garden"></div>
+    </section>
+
+    <section class="add-category-card">
+      <div>
+        <p class="eyebrow">Grow something new</p>
+        <h2>Add a category</h2>
+      </div>
+
+      <form id="categoryForm" class="category-form">
+        <input
+          id="categoryName"
+          type="text"
+          placeholder="Category name"
+          required
+        >
+
+        <select id="categoryPlant" aria-label="Choose a plant">
+          <option value="🌸">Lavender</option>
+          <option value="🌿">Fern</option>
+          <option value="🌼">Daisy</option>
+          <option value="🌱">Herb</option>
+          <option value="🌹">Rose</option>
+          <option value="🌻">Sunflower</option>
+          <option value="🌷">Tulip</option>
+          <option value="🪻">Hyacinth</option>
+        </select>
+
+        <input
+          id="categoryGoal"
+          type="number"
+          min="1"
+          max="30"
+          value="4"
+          aria-label="Weekly goal"
+        >
+
+        <button type="submit" class="primary-button">Add category</button>
+      </form>
+
+      <p class="helper">
+        The number is how many activities will bring the plant to full bloom each week.
+      </p>
+    </section>
+
+    <section class="lower-grid">
+      <div class="panel">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Daily check-in</p>
+            <h2>Completed today</h2>
+          </div>
+          <span id="todayDate" class="date-label"></span>
+        </div>
+
+        <div id="todayList"></div>
+      </div>
+
+      <div class="panel">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Past gardens</p>
+            <h2>Recent weeks</h2>
+          </div>
+        </div>
+
+        <div id="historyList"></div>
+      </div>
+    </section>
+
+    <p class="footer-note">
+      Your garden begins a new weekly cycle every Monday. Missed days never harm your plants.
+    </p>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
